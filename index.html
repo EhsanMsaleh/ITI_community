@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sign Up</title>
-  <link rel="icon" href="../assest/image/iti-logo.png">
+  <link rel="icon" href="assest/image/iti-logo.png">
   <link rel="stylesheet" href="./css/stylee.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Moo+Lah+Lah&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./css/login.css" />
+  <link rel="stylesheet" href="css/login.css" />
 </head>
 
 <body>
@@ -40,51 +40,71 @@
   </div>
   <div class="signUp_right">
     <div class="signUp_right_button">
-      <button class="sign_up">Sign up</button>
-      <button class="sign_in">Sign in</button>
+      <button class="sign_up" id="signUp">Sign up</button>
+      <button class="sign_in" id="signIn">Sign in</button>
     </div>
     <div class="sign_up_form">
       <p>Sign up</p>
-      <section>
-        <aside class="sign_up_form_label"><label for="fname">First name </label></aside>
-        <aside class="sign_up_form_input"><input type="text" id="fname" name="firstname"></aside>
-      </section>
-      <section>
-        <aside class="sign_up_form_label"><label for="lname">Last name </label></aside>
-        <aside class="sign_up_form_input"><input type="text" id="lname" name="lastname"></aside>
-      </section>
-      <section>
-        <aside class="sign_up_form_label"><label for="Email">Email</label></aside>
-        <aside class="sign_up_form_input"> <input type="email" id="Email" name="Email"></aside>
-      </section>
-      <section>
-        <aside class="sign_up_form_label"><label for="track">Track</label></aside>
-        <aside class="sign_up_form_input">
-          <select id="track" name="track">
-            <option value="Full-Stack">Full Stack</option>
-            <option value="Front-end">Front-end</option>
-            <option value="back-end">Back-end</option>
-          </select>
-        </aside>
-      </section>
-      <section>
-        <aside class="sign_up_form_label"><label for="Passward">Passward</label></aside>
-        <aside class="sign_up_form_input"><input type="passward" id="Passward" name="Passward"></aside>
-      </section>
-      <section>
-        <aside class="sign_up_form_label"><label for="chek_Passward">Check Passward</label></aside>
-        <aside class="sign_up_form_input"> <input type="passward" id="check_Passward" name="Passward"></aside>
-      </section>
-      <section>
-        <aside class="sign_up_form_label"><label for="bio">BIO</label></aside>
-        <aside class="sign_up_form_input"> <input type="text" id="bio" name="bio"></aside>
-      </section>
+      <form id="form">
+        <section>
+          <aside class="sign_up_form_label"><label for="fname">First name </label></aside>
+          <aside class="sign_up_form_input">
+            <input type="text" id="fname" name="firstname">
+            <small id="FnameMess"></small>
+          </aside>
+        </section>
+        <section>
+          <aside class="sign_up_form_label"><label for="lname">Last name </label></aside>
+          <aside class="sign_up_form_input">
+            <input type="text" id="lname" name="lastname">
+            <small id="LnameMess"></small>
+          </aside>
+        </section>
+        <section>
+          <aside class="sign_up_form_label"><label for="Email">Email</label></aside>
+          <aside class="sign_up_form_input">
+            <input type="email" id="Email" name="Email">
+            <small id="emailMess"></small>
+          </aside>
+        </section>
+        <section>
+          <aside class="sign_up_form_label"><label for="track">Track</label></aside>
+          <aside class="sign_up_form_input">
+            <select id="track" name="track">
+              <option value="Full-Stack">Full Stack</option>
+              <option value="Front-end">Front-end</option>
+              <option value="back-end">Back-end</option>
+            </select>
+            <small id="trackMessage"></small>
+          </aside>
+        </section>
+        <section>
+          <aside class="sign_up_form_label"><label for="Passward">Passward</label></aside>
+          <aside class="sign_up_form_input">
+            <input type="password" id="Passward" name="Passward">
+            <small id="passwardMess"></small>
+          </aside>
+        </section>
+        <section>
+          <aside class="sign_up_form_label"><label for="check_Passward">Check Passward</label></aside>
+          <aside class="sign_up_form_input">
+            <input type="password" id="check_Passward" name="Passward">
+            <small id="passwarRepMess"></small>
+          </aside>
+        </section>
+        <section>
+          <aside class="sign_up_form_label"><label for="bio">BIO</label></aside>
+          <aside class="sign_up_form_input"> <input type="text" id="bio" name="bio"></aside>
+        </section>
 
-      <button class="sign_up_form_sign">Sign Up</button>
+        <button class="sign_up_form_sign" type="submit">Sign Up</button>
+      </form>
+
 
     </div>
 
   </div>
+  <script src="js/sign_up.js"></script>
 </body>
 
 </html>

@@ -6,12 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- <link rel="stylesheet" type="text/css" href="style.css" />
-    <script src="../home.js"></script>
-    <link rel="stylesheet" href="../stylee.css"> -->
 
     <link rel="stylesheet" type="text/css" href="./css/stylee.css" />
-    <link rel="stylesheet" href="./css/home.css">
 
     <!--font awesome for icons-->
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
@@ -26,193 +22,133 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@200&display=swap"
         rel="stylesheet">
-    <link rel="icon" href="../assest/image/iti-logo.png">
+    <link rel="stylesheet" href="css/profile.css" />
+    <link rel="stylesheet" href="./css/slider.css">
+    <link rel="stylesheet" href="./css/home.css">
+
+    <link rel="icon" href="assest/image/iti-logo.png">
 
     <title>ITI community</title>
+    <style>
+
+    </style>
 </head>
 
 <body>
-    <!-- Navbar (sticky up) -->
     <header id="head">
         <nav id="logohome">
-            <!--tag for logo as a icon maybe-->
-            <p id="iticom"> Community</p>
+            <p id="iticom"> <a href="./home.html">Community</a></p>
         </nav>
         <nav id="nav_head">
-            <!--put in href the page ypu create !!!-->
             <a href="#home" class="iti-bar-item-button">Home</a>
-            <a href="#frindes" class="iti-bar-item-button">Friends</a>
+            <a href="./frindes.html" class="iti-bar-item-button">Friends</a>
             <a href="./profile.html" class="iti-bar-item-button">Profile</a>
-            <a href="#logout" class="iti-bar-item-button">Logout</a>
+            <a href="index2.html" class="iti-bar-item-button">Logout</a>
+            <a id="themnavigation" class="toggle"> <i class="fas fa-moon themnavigation"></i></a>
+
         </nav>
     </header>
-    <!-- Page Container -->
     <div id="Container">
-        <aside id="side_profile">
-            <!--all this info we will get it from DB-->
-            <div id="imgpro">
-                <div id="profile_background">
-
-                </div>
-                <div class="profile_img">
-                    <img src="../assest/image/3.jpg" />
-                </div>
+        <div class="profile_right_side">
+            <div class="img">
+                <img id="ProfileImg" src="./assest/image/1.jpeg">
             </div>
-            <div id="profile_info">
-                <p>name</p>
-                <p>job</p>
+            <div class="profile_data">
+                <h2 id="UserFullName"> </h2>
+                <h4 class="grayTxt" id="UserTrack"> </h4>
             </div>
-            <div id="profile_following">
-                following
-                <p>5</p>
+            <div class="profile_data">
+                <p class="grayTxt"> Following</p>
+                <p id="profileFolowing">0</p>
             </div>
-            <div id="profile_followers">
-                followers
-                <p>5</p>
-            </div>
-            <div id="profile_view">
-                <p><a href="./profile.html">View Profile</a></p>
+            <div class="profile_data">
+                <p class="grayTxt">Followers</p>
+                <p id="profileFollowers">0</p>
             </div>
 
-        </aside>
+            <div class="profile_data">
+                <h1 class="view__title"> <a href="./profile.html"> View Profile</a> </h1>
+
+            </div>
+            <!-- </div> -->
+        </div>
+
+        <!-- </aside> -->
         <aside id="feed">
-            <section id="post">
-                <img class="profile_img" src="../assest/image/3.jpg">
-                <!--to display the images-->
-                 <!-- <div id="display_image" ></div> -->
-                <textarea id="tex_post" placeholder="post"></textarea>
-                <div id="icons_post">
-                    <!-- take care image will be uoloaded file -->
-                   <label  onclick="uploadefile()" style="cursor: pointer;" for="uploade"> <i class="fas fa-images"></i> </label>
-                    <input type="file" id="uploade" style="display: none; visibility: hidden;">
-                    <i onclick="changealign()" class="fas fa-align-left"></i>
-                    <i onclick="changefont()" class="fas fa-font"></i>
-                    <i onclick="changecolor()" class="fas fa-fill"></i>
+            <section class="post-container">
+                <div class="post__user--profile">
+                    <img id="homeProfileImg" src="./assest/image/1.jpeg">
+                    <p id="profileFullName"></p>
                 </div>
-                <button id="button_post">Post</button>
-            </section>
-            <section id="top_profile">
-                <h4>Top Profiles</h4>
-                <div class="top">
-                    <img>
-                    <p>Name1</p>
-                    <p>Jop</p>
-                    <button>Follow</button>
-                </div>
-                <div class="top">
-                    <img>
-                    <p>Name2</p>
-                    <p>Jop</p>
-                    <button>Follow</button>
-                </div>
-                <div class="top">
-                    <img>
-                    <p>Name3</p>
-                    <p>Jop</p>
-                    <button>Follow</button>
-                </div>
-                <div class="top">
-                    <img>
-                    <p>Name4</p>
-                    <p>Jop</p>
-                    <button>Follow</button>
-                </div>
-                <div class="top">
-                    <img>
-                    <p>Name5</p>
-                    <p>Jop</p>
-                    <button>Follow</button>
-                </div>
-            </section>
-            <section id="users_posts">
-                <div id="first_post">
-                    <header class="head_post">
-                        <img>
-                        <p>USER NAME</p>
-                        <time>mon jan 18 2021</time>
-                    </header>
-                    <div id="pp">
-                        <p>this is my first post</p>
-
-                        <button>
-                            <i class="far fa-thumbs-up"></i>
-                            Like
-                        </button>
-                        <button>
-                            <i class="fas fa-comments"></i>
-                            Comment
-                        </button>
-                        <div id="comment">
-                            <img>
-                            <textarea></textarea>
-                        </div>
+                <article class="post--body">
+                    <div class="post__body__container">
+                        <textarea name="postTextArea" id="postTextArea" rows="2"
+                            placeholder="write your thought.. !"></textarea>
+                        <div id="preview"></div>
                     </div>
+
+                    <div class="post__body--icon">
+                        <div class="post__body__textIcons">
+                            <label for="postImgs">
+                                <i class="fas fa-images icon"></i>
+                            </label>
+                            <input name="postImgs" id="postImgs" type="file" onchange="previewFiles()" accept="image/*"
+                                multiple>
+                            <i onclick="changealign()" class="fas fa-align-left icon"></i>
+                            <i onclick="changefont()" class="fas fa-font icon"></i>
+                            <i onclick="changecolor()" class="fas fa-fill icon"></i>
+                        </div>
+                        <button id="post-btn" class="post-btn " onclick="addpost()">Post</button>
+                    </div>
+                </article>
+            </section>
+
+            <div class="clearfix"></div>
+            <section>
+                <div id="personal-posts">
+
                 </div>
+            </section>
+            <section class="slider">
+                <h2> Top Frindes</h2>
+                <div class="slider__container" id="slidercontent">
+
+                </div>
+                <!-- buttons -->
+                <!-- prev btn -->
+                <div id="slider_button">
+                    <button class="btn prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button class="btn next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+
+            </section>
+            <!---------------------- --------------------------------------------------------------------------------------------- -->
+            <div class="clearfix"></div>
+
+            <section id="users_posts">
+
+            </section>
+            <section class="comment"></section>
             </section>
         </aside>
     </div>
+    <footer> footer</footer>
 
-<!--js for home page-->
-<script>
-    /*icons for post*/
-    /*first icon*/
-    function uploadefile(){
-        var place=document.getElementById("post");
-        var place1=document.getElementById("tex_post");
-       var newElement= document.createElement("div");
-       newElement.setAttribute("id","display_image");
-        place.insertBefore(newElement, place1);
-       
-        // <div id="display_image" ></div>
-    const image_input = document.querySelector("#uploade");
-    var uploaded_image;
-    image_input.addEventListener('change', function() {
-    const reader = new FileReader();
-    reader.addEventListener('load', () => {
-    uploaded_image = reader.result;
-    document.querySelector("#display_image").style.backgroundImage = `url(${uploaded_image})`;
-    });
-    reader.readAsDataURL(this.files[0]);
-    });
-      console.log(place);
 
-    }
-    /*second icon*/
-    function changealign()
-    {
-        var align=["center","right","left"];
+    <script src="js/profile.js"></script>
+    <script src="js/post.js"></script>
 
-        var result=align[Math.floor(Math.random()*align.length)];
-        var textbox = document.getElementById("tex_post");
-        textbox.style.textAlign=result;
+    <script src="js/slider.js"></script>
+    <script src="js/home.js"></script>
 
-    }
-     /*third icon*/
-     function changefont()
-    {
-        var align=["sans-serif","serif","cursive","monospace"];
 
-        var result=align[Math.floor(Math.random()*align.length)];
-        var textbox = document.getElementById("tex_post");
-        textbox.style.fontFamily=result;
-        // var textbox = document.getElementById("tex_post");
-        // textbox.style.fontSize=
+    <script src="./js/dark_mode.js"></script>
 
-    }
-     /*4 icon*/
-     function changecolor()
-    {
-        var align=["red","black","blue","green","brown"];
 
-        var result=align[Math.floor(Math.random()*align.length)];
-        var textbox = document.getElementById("tex_post");
-        textbox.style.color=result;
-
-    }
-</script>
-
-    <!-- <script src="script.js"></script>
--->
 </body>
 
 </html>

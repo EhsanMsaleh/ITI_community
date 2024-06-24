@@ -80,6 +80,7 @@ p.login_left_description {
 .login_right .login_form {
   margin: 38px;
   width: 80%;
+  
 }
 .login_right .login_form {
   margin-top: 70px;
@@ -116,6 +117,10 @@ p.login_left_description {
   border-color: #f5f6f7;
   border-radius: 0.4rem 0.4rem;
 }
+small{
+  display: block;
+  margin-left: 30%;
+}
 .sign_up_form_input select,
 .login_form_input select {
   width: 60%;
@@ -135,4 +140,9 @@ p.login_left_description {
   margin-top: 40px;
   width: 100%;
   border-radius: 50rem;
+}
+
+button:hover{
+  cursor: pointer;
+
 }

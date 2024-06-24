@@ -1,16 +1,37 @@
 :root {
   --layout-primary: #e9e6e6;
+  --card-bg: #fff;
   --layout-secondary: #901b20;
+  --nav-secondary: #0a111a;
+  --nav-color: #fff;
   --text-primary: #242627;
   --text-secondary: #0a111a;
   --background-secondary: #1c2b36;
   --btn-hover: #88b2db;
+  --color: #000;
   --btn-primary: #901b20;
+  --border: #fff;
 }
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+.dark-theme {
+  --border: #fff;
+  --layout-primary: #0a0a0a;
+  --card-bg: #000;
+  --text-primary: #000;
+  --nav-color: #fff;
+  --color: #fff;
+
+  --nav-secondary: #901b20;
+}
+.dark-btn-on {
+  padding-left: 23px;
+  background: #000;
+  --nav-color: #fff;
 }
 @font-face {
   font-family: itilogo;
@@ -44,6 +65,7 @@ button:focus {
 a {
   cursor: pointer;
   text-decoration: none;
+  color: var(--color);
 }
 .btn {
   background-color: var(--layout-primary);
@@ -62,7 +84,7 @@ a {
 
 /* navbar */
 #head {
-  background-color: var(--background-secondary);
+  background-color: var(--nav-secondary);
   width: 100%;
   padding: 15px;
   overflow: hidden;
@@ -71,7 +93,7 @@ a {
   float: left;
   display: block;
   padding-left: 120px;
-  color: var(--layout-primary);
+  color: var(--nav-color);
   padding-top: 10px;
   font-family: itilogo, sans-serif;
   font-size: 25px;
@@ -84,7 +106,7 @@ a {
 #head > #nav_head > a {
   float: left;
   display: block;
-  color: var(--layout-primary);
+  color: var(--nav-color);
   text-align: center;
   padding: 14px 8px;
   text-decoration: none;
@@ -93,6 +115,5 @@ a {
 }
 /* Change the color of links on hover */
 #head > #nav_head > a:hover {
-  background-color: var(--layout-primary);
-  color: var(--layout-secondary);
+  color: var(--btn-hover);
 }

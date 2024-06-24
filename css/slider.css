@@ -1,0 +1,103 @@
+.slider {
+  margin-top: 0.5em;
+  margin-bottom: 0.7em;
+  background-color: var(--card-bg);
+  border-radius: 0.5em;
+  border: 1px solid var(--border);
+  position: relative;
+  transition: all 0.5s ease-in;
+}
+.slider h2 {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+.slider__container {
+  display: flex;
+}
+.slider__container__card {
+  width: 32%;
+  margin: 1em;
+  border-radius: 0.5em;
+  background-color: aliceblue;
+  height: 204px;
+}
+.slider__container__card img {
+  width: 100%;
+  height: 40%;
+  border-top-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+}
+.slider__button__follow {
+  border: none;
+  width: 100%;
+  padding: 0.5em;
+  font-size: 1em;
+  margin: 0.5em 0;
+  border-radius: 0.5em;
+  background-color: var(--layout-primary);
+}
+.slider__username {
+  padding: 1em;
+  font-size: 0.75em;
+  text-align: center;
+}
+.slider__work {
+  padding: 0.5em;
+  font-size: 0.75em;
+}
+.btn {
+  position: absolute;
+  top: 171px;
+  background: #c92727;
+  color: #ccc;
+  padding: 0.25rem 0.35rem;
+  border-radius: 0.25rem;
+  border: transparent;
+  cursor: pointer;
+  height: 3em;
+}
+.btn.active {
+  background-color: #5c2f29;
+  box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+.next-btn {
+  right: -0.3rem;
+}
+.prev-btn {
+  left: -0.3rem;
+}
+.follow {
+  background-color: var(--layout-primary);
+}
+.unfollow {
+  background-color: #7cde7c;
+}
+#personal-frindes {
+  margin: 50px auto;
+  display: flex;
+  padding-left: 50px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.single__frind {
+  width: 25%;
+  background-color: #fff;
+  text-align: center;
+  height: auto;
+}
+.single__frind img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 0.5em;
+}
+
+.single__frind button {
+  width: 100%;
+  margin: 5px;
+  margin-bottom: 0.5em;
+}
+.container-personal-frindes {
+  margin: 10px auto;
+  text-align: center;
+}
